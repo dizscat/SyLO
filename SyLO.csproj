@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>SyLO</AssemblyName>
+    <RootNamespace>SyLO</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Product>SyLO - Spotify Lyrics Overlay</Product>
+    <Version>1.0.0</Version>
+    <!-- DPI diatur lewat app.manifest (PerMonitorV2) untuk WPF; peringatan khusus WinForms ini tidak relevan -->
+    <NoWarn>$(NoWarn);WFO0003</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.32.0" />
+  </ItemGroup>
+
+</Project>

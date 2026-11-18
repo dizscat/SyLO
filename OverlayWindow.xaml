@@ -1,0 +1,26 @@
+<Window x:Class="SyLO.OverlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SyLO Overlay"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        ShowInTaskbar="False"
+        ShowActivated="False"
+        ResizeMode="NoResize"
+        Focusable="False"
+        IsHitTestVisible="False"
+        SizeToContent="Height"
+        Width="800">
+    <Grid>
+        <!-- Gaya Klasik: beberapa baris di posisi tetap -->
+        <Border x:Name="Root" CornerRadius="12" Padding="18,8" Visibility="Hidden">
+            <StackPanel x:Name="LinesPanel"/>
+        </Border>
+        <!-- Gaya Sinematik: satu baris, muncul per huruf, posisi acak, mengambang -->
+        <Border x:Name="CineHost" CornerRadius="14" Padding="28" Visibility="Collapsed">
+            <WrapPanel x:Name="CineWrap" RenderTransformOrigin="0.5,0.5"/>
+        </Border>
+    </Grid>
+</Window>
